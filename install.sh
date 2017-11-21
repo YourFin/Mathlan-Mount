@@ -51,7 +51,7 @@ if ! sshfs --version; then
 	    exit 1
 	fi
 	echo "Allowing non-root users to mount fuse filesystems..."
-	sudo echo "user_allow_other" >> /etc/fuse.conf
+	sudo sh -c 'echo "user_allow_other" >> /etc/fuse.conf'
     else
 	echo "You're running a weirdo UNIX machine. You don't need my bloody help doing this."
 	exit 1
