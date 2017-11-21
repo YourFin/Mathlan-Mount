@@ -50,6 +50,8 @@ if ! sshfs --version; then
 	    echo "You appear to be running a distro that the author of this script was too lazy to support. Please install sshfs through your distribution's package manager and then re-run this script."
 	    exit 1
 	fi
+	echo "Allowing non-root users to mount fuse filesystems..."
+	sudo echo "user_allow_other" >> /etc/fuse.conf
     else
 	echo "You're running a weirdo UNIX machine. You don't need my bloody help doing this."
 	exit 1
