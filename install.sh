@@ -58,4 +58,9 @@ fi
 
 echo "sshfs installed! Cloning repository from github..."
 git clone https://github.com/YourFin/Mathlan-Mount.git
+
+echo "Please enter your MATHLAN username:"
+read userinput
+echo $userinput > ./Mathlan-Mount/username
+
 echo "Done installing!"
