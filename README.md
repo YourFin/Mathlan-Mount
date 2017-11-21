@@ -1,24 +1,13 @@
 # Mathlan-Mount
-A tiny script to mount mathlan quickly on linux and OSX
+A tiny script to mount mathlan quickly on linux and OSX with as little hassle as possible.
 
-## OSX
+## OSX and linux:
+NOTE: You must have superuser (read: root) privilages to install sshfs if it is not on your machine already. If you don't know what this means don't worry about it.
 
-1. Install brew if you haven't already: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+1. Run `curl https://raw.githubusercontent.com/YourFin/Mathlan-Mount/master/install.sh | bash` in the directory you would like the script installed to install this.
+2. `cd Mathlan-Mount`
+3. Now any time you want to connect all you have to run is: `./mountmath.sh`, and enter your MATHLAN password in the prompted box!
+4. Unmount with `umount /your/mounted/directory/here`, or by standard GUI methods.
 
-2. Run `brew cask install osxfuse`
-
-3. Run `brew install sshfs`
-
-Downloading the the script
-
-1. sshfs must be installed for this to work ([OSx link](https://github.com/osxfuse/osxfuse/wiki/SSHFS)) ([direct link to download](https://github.com/osxfuse/sshfs/releases/download/osxfuse-sshfs-2.5.0/sshfs-2.5.0.pkg)). On linux this will be `sudo apt-get install sshfs` or `sudo [os-package-manager-install] sshfs`
-
-2. `git clone https://github.com/YourFin/Mathlan-Mount.git` in the folder you want to load this in
-
-If you're on OS
-
-`cd Mathlan-Mount`
-
-`./mountmath.sh $USERNAME` where `$USERNAME` is your mathlan username.
-
-You should be prompted first for your computer password, and then your mathlan password.
+## Windows:
+Take a look at [win-sshfs](https://github.com/Foreveryone-cz/win-sshfs). The host should be `ssh.cs.grinnell.edu`, port 22.
