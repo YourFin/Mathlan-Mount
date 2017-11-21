@@ -15,7 +15,7 @@ if ! sshfs --version; then
 	echo "You appear to have a mac."
 	echo "making sure git is installed. If prompted please install xcode tools."
 	git --version >/dev/null
-	while ! $(git --version >/dev/null 2>/dev/stdout); do sleep 100 ; done
+	while ! git --version >/dev/null 2>/dev/null; do sleep 100 ; done
 	echo "Done"
 	echo "Checking if brew is installed."
 	brew --version >/dev/null 2>/dev/null ||
