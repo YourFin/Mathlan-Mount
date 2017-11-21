@@ -1,5 +1,7 @@
 # Mathlan-Mount
-A tiny script to mount mathlan quickly on linux and OSX with as little hassle as possible.
+Ever wanted to do your CS homework NOT on mathlan, but still needed access to your mathlan account? This script is for you!
+
+It creates a folder, just like any other on your system, that mirrors your home directory on mathlan; so any changes you make in it also occur in your mathlan folder.
 
 ## OSX and linux:
 NOTE: You must have superuser (read: root) privilages to install sshfs if it is not on your machine already. If you don't know what this means don't worry about it.
