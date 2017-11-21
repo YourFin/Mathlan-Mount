@@ -13,15 +13,15 @@ if ! sshfs --version; then
     echo "sshfs not found. Installing..."
     if [ "$machine" == "Mac" ] ; then
 	echo "You appear to have a mac."
-	echo "making sure git is installed. If prompted please install xcode tools."
+	echo "making sure git is installed. If prompted please install developer tools (not XCode)."
 	git --version >/dev/null
 	while ! git --version >/dev/null 2>/dev/null; do sleep 100 ; done
 	echo "Done"
 	echo "Checking if brew is installed."
 	brew --version >/dev/null 2>/dev/null ||
 	    echo "Brew not found... Installing..." &&
-		/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	echo 
+		/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" || echo "brew unable to install. Make sure that you have administrative privilages, (i.e. sudo) and then run this again." && exit 1
+	echo
 	echo "Installing sshfs with brew..."
 	brew cask install osxfuse
 	brew install sshfs
