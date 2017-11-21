@@ -20,7 +20,7 @@ if ! sshfs --version; then
 	echo "Checking if brew is installed."
 	brew --version >/dev/null 2>/dev/null ||
 	    echo "Brew not found... Installing..." &&
-		/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" || echo "\nBrew unable to install. Make sure that you have administrative privilages, (i.e. sudo) and then run this again." && exit 1
+		/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" || echo "\n\nBrew unable to install. Make sure that you have administrative privilages, (i.e. sudo) and then run this again." && exit 1
 	echo
 	echo "Installing sshfs with brew..."
 	brew cask install osxfuse
