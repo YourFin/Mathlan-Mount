@@ -14,4 +14,4 @@ NOTE: You must have superuser (read: root) privilages to install sshfs if it is 
 4. Unmount with `umount /your/mounted/directory/here`, or by standard GUI methods.
 
 ## Windows:
-Take a look at [win-sshfs](https://github.com/Foreveryone-cz/win-sshfs). The host should be `ssh.cs.grinnell.edu`, port 22.
+Follow [these](http://cybernetnews.com/cybernotes-map-a-ftp-to-a-drive-in-windows/) instructions. The initial map network drive dialogue can be found by right clicking on "network" in windows explorer. The ftp server should be `ftp://ftp.math.grinnell.edu`, and your username and password should be those for mathlan.
